@@ -132,24 +132,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        CONBO_ESC {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
-        COMBO_TAB {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
-
-        COMBO_WIN {
-            bindings = <&kp LWIN>;
-            key-positions = <30 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         MACRO_LTAP: MACRO_LTAP {
