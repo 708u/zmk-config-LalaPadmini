@@ -66,13 +66,11 @@
     };
 };
 
-tapping-term-ms = <130>;};
+&mt { quick-tap-ms = <130>; };
 
-tapping-term-ms {
-    = <130>;};
+&lt { quick-tap-ms = <130>; };
 
-/
-
+/ {
     behaviors {
         // Encoder to Mouse Scroll
 
@@ -186,9 +184,9 @@ tapping-term-ms {
 
         symbol_layer {
             bindings = <
-&kp     &kp     &none  &none   &none   &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &none
-&kp     &kp     &kp    &kp     &kp     &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp SEMICOLON
-&kp     &kp     &kp    &kp     &kp     &kp GRAVE  &kp MINUS             &kp EQUAL              &kp COMMA      &kp PERIOD
+&trans  &trans  &none  &none   &none   &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &none
+&trans  &trans  &trans &trans  &trans  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp SEMICOLON
+&trans  &trans  &trans &trans  &trans  &kp GRAVE  &kp MINUS             &kp EQUAL              &kp COMMA      &kp PERIOD
 &trans  &trans         &trans  &trans  &trans     &trans                                       &trans         &trans
             >;
         };
