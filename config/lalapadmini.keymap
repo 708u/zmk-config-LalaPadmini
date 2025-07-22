@@ -66,9 +66,9 @@
     };
 };
 
-&mt { quick-tap-ms = <200>; };
+&mt { quick-tap-ms = <130>; };
 
-&lt { quick-tap-ms = <200>; };
+&lt { quick-tap-ms = <130>; };
 
 / {
     behaviors {
@@ -235,7 +235,7 @@
             display-name = "mouse_l_layer";
             bindings = <
 &trans  &trans       &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&mo 7   &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 7   &MACRO_LTAP  &mkp RCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mkp MB4     &trans     &mkp MB5   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans     &trans  &trans  &trans          &trans  &trans
             >;
