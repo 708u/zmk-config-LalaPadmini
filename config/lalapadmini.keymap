@@ -154,7 +154,7 @@
 &none           &kp W         &kp E  &kp R        &kp T      &kp Y                 &kp U                &kp I  &kp O  &none
 &kp A           &kp S         &kp D  &kp F        &kp G      &kp H                 &kp J                &kp K  &kp L  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp X         &kp C  &kp V        &kp B      &kp N                 &kp M                &kp P  &kp Z  &mt RSHIFT P
-&kp LCTRL       &kp LEFT_ALT         &lt 1 SPACE  &lt 3 TAB  &mt ESCAPE RIGHT_ALT  &mt ENTER RIGHT_GUI         &none  &mt F12 RIGHT_CONTROL
+&kp LCTRL       &kp LEFT_ALT         &lt 1 SPACE  &lt 8 TAB  &mt ESCAPE RIGHT_ALT  &mt ENTER RIGHT_GUI         &none  &mt F12 RIGHT_CONTROL
             >;
         };
 
@@ -163,10 +163,10 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&mt2 F1 NUMBER_1  &mt2 F2 LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)    &kp LS(NUMBER_4)   &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)       &kp KP_DIVIDE
-&mo 2             &mt2 F7 N7            &kp LEFT_ALT      &mt LEFT_GUI ENTER  &mt2 F10 N0        &kp LEFT          &kp DOWN          &kp UP_ARROW      &kp RIGHT        &kp KP_ASTERISK
-&mt2 F11 GRAVE    &mt2 F12 SQT          &kp SEMICOLON     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_NUMBER_0   &kp LANG2         &kp LANG1         &kp KP_NUMBER_3  &kp KP_MINUS
-&trans            &trans                                  &trans              &trans             &trans            &trans                              &none            &kp KP_PLUS
+&mt2 F1 NUMBER_1  &mt2 F2 LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)    &kp LS(NUMBER_4)   &kp LS(NUMBER_5)  &kp LS(NUMBER_6)    &kp LS(NUMBER_7)  &kp LS(N8)       &kp KP_DIVIDE
+&mo 2             &mt2 F7 N7            &kp LEFT_ALT      &mt LEFT_GUI ENTER  &mt2 F10 N0        &kp LEFT          &kp DOWN            &kp UP_ARROW      &kp RIGHT        &kp KP_ASTERISK
+&mt2 F11 GRAVE    &mt2 F12 SQT          &kp SEMICOLON     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_NUMBER_0   &kp LANG2           &kp LANG1         &kp KP_NUMBER_3  &kp KP_MINUS
+&trans            &trans                                  &trans              &trans             &trans            &mt LEFT_GUI ENTER                    &none            &kp KP_PLUS
             >;
         };
 
@@ -180,15 +180,6 @@
             >;
 
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
-        };
-
-        symbol_layer {
-            bindings = <
-&trans  &trans  &none  &none   &none   &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &none
-&trans  &trans  &trans &trans  &trans  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp SEMICOLON
-&trans  &trans  &trans &trans  &trans  &kp GRAVE  &kp MINUS             &kp EQUAL              &kp COMMA      &kp PERIOD
-&trans  &trans         &trans  &trans  &trans     &trans                                       &trans         &trans
-            >;
         };
 
         SYSTEM_LAYER {
@@ -207,7 +198,7 @@
             display-name = "mouse_r_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 6
+&trans  &trans  &trans  &trans  &trans  &trans  &MACRO_LTAP  &mkp LCLK  &mkp RCLK  &mo 5
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4     &none      &mkp MB5   &trans
 &trans  &trans          &trans  &trans  &trans  &trans                  &trans     &trans
             >;
@@ -227,7 +218,7 @@
             display-name = "mouse_l_layer";
             bindings = <
 &trans  &trans       &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&mo 8   &MACRO_LTAP  &mkp RCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 7   &MACRO_LTAP  &mkp RCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mkp MB4     &trans     &mkp MB5   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans     &trans  &trans  &trans          &trans  &trans
             >;
@@ -242,6 +233,15 @@
 &trans  &trans          &trans  &trans  &trans  &trans          &trans  &trans
             >;
         };
+
+        symbol_layer {
+            bindings = <
+&trans  &trans  &none   &none   &none   &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &none
+&trans  &trans  &trans  &trans  &trans  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp SEMICOLON
+&trans  &trans  &trans  &trans  &trans  &kp GRAVE  &kp MINUS             &kp EQUAL              &kp COMMA      &kp PERIOD
+&trans  &trans          &trans  &trans  &trans     &trans                                       &trans         &trans
+            >;
+        };
     };
 
     conditional_layers {
@@ -249,7 +249,7 @@
 
         System_layer {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
