@@ -96,7 +96,8 @@
         dr-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "2x";
-        no-taps;
+        // enable tap on track pad
+        // no-taps;
         no-smoothing;
     };
 };
