@@ -132,7 +132,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        enable_numpad {
+            bindings = <&mo 2>;
+            key-positions = <10 32>;
+        };
+    };
 
     macros {
         MACRO_LTAP: MACRO_LTAP {
@@ -164,7 +171,7 @@
 
             bindings = <
 &mt2 F1 NUMBER_1  &mt2 F2 LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)    &kp LS(NUMBER_4)   &kp LS(NUMBER_5)  &kp LS(NUMBER_6)    &kp LS(NUMBER_7)  &kp LS(N8)       &kp KP_DIVIDE
-&mo 2             &mt2 F7 N7            &kp LEFT_ALT      &mt LEFT_GUI ENTER  &mt2 F10 N0        &kp LEFT          &kp DOWN            &kp UP_ARROW      &kp RIGHT        &kp KP_ASTERISK
+&none             &mt2 F7 N7            &kp LEFT_ALT      &mt LEFT_GUI ENTER  &mt2 F10 N0        &kp LEFT          &kp DOWN            &kp UP_ARROW      &kp RIGHT        &kp KP_ASTERISK
 &mt2 F11 GRAVE    &mt2 F12 SQT          &kp SEMICOLON     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_NUMBER_0   &kp LANG2           &kp LANG1         &kp KP_NUMBER_3  &kp KP_MINUS
 &trans            &trans                                  &trans              &trans             &trans            &mt LEFT_GUI ENTER                    &none            &kp KP_PLUS
             >;
