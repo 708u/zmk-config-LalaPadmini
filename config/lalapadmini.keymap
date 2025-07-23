@@ -23,7 +23,7 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        // cursor speed. e.g.  2 / 1 == 2倍,,
+        // cursor speed. e.g.  2 / 1 == 2倍,,,
         <&zip_xy_scaler 6 2>,
         <&zip_temp_layer MOUSE_R_LAYER 300>;
 
@@ -161,7 +161,7 @@
             bindings = <
 &none           &kp W         &kp E  &kp R        &kp T      &kp Y                 &kp U                 &kp I  &kp O  &none
 &kp A           &kp S         &kp D  &kp F        &kp G      &kp H                 &kp J                 &kp K  &kp L  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp X         &kp C  &kp V        &kp B      &kp N                 &kp M                 &kp P  &kp Z  &mt RSHIFT Q
+&kp LEFT_SHIFT  &kp X         &kp C  &kp V        &kp B      &kp N                 &kp M                 &none  &none  &mt RSHIFT Q
 &kp LCTRL       &kp LEFT_ALT         &lt 1 SPACE  &lt 8 TAB  &mt RIGHT_ALT ESCAPE  &mt RIGHT_GUI RETURN         &none  &mt F12 RIGHT_CONTROL
             >;
         };
