@@ -23,7 +23,7 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,
+        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,,
         <&zip_xy_scaler 6 2>,
         <&zip_temp_layer MOUSE_R_LAYER 300>;
 
@@ -39,7 +39,7 @@
         layers = <SCROLL_R_LAYER>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,
+            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,,
             <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)>,
             <&zip_scroll_scaler 1 16>;
     };
@@ -178,7 +178,7 @@
             bindings = <
 &none                    &kp W  &kp E  &kp R        &kp T      &kp Y                 &kp U                 &kp I  &kp O  &none
 &kp A                    &kp S  &kp D  &kp F        &kp G      &kp H                 &kp J                 &kp K  &kp L  &kp BACKSPACE
-&td_shift_f12_to_mumpad  &kp X  &kp C  &kp V        &kp B      &kp N                 &kp M                 &kp P  &kp Z  &td_shitt_q_to_ctrl
+&td_shift_f12_to_mumpad  &mo 3  &kp C  &kp V        &kp B      &kp N                 &kp M                 &kp P  &kp Z  &td_shitt_q_to_ctrl
 &none                    &mo 3         &lt 1 SPACE  &lt 8 TAB  &mt RIGHT_ALT ESCAPE  &mt RIGHT_GUI RETURN         &none  &none
             >;
         };
