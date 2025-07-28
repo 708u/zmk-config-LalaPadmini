@@ -23,7 +23,7 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,,,,,,,,,
+        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 6 2>,
         <&zip_temp_layer MOUSE_R_LAYER 300>;
 
@@ -39,7 +39,7 @@
         layers = <SCROLL_R_LAYER>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,,,,,,,,,
+            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,,,,,,,,,,
             <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)>,
             <&zip_scroll_scaler 1 16>;
     };
@@ -191,7 +191,7 @@
 &trans  &mt2 F2 LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)    &kp LS(NUMBER_4)   &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)  &trans
 &trans  &mt2 F7 N7            &kp LEFT_ALT      &mt LEFT_GUI ENTER  &mt2 F10 N0        &kp LEFT          &kp DOWN          &kp UP_ARROW      &kp RIGHT   &trans
 &trans  &mt2 F12 SQT          &kp SEMICOLON     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans            &kp LANG2         &kp LANG1         &trans      &trans
-&trans  &trans                                  &trans              &trans             &trans            &kp RG(ENTER)                       &none       &trans
+&trans  &trans                                  &trans              &trans             &trans            &trans                              &none       &trans
             >;
         };
 
