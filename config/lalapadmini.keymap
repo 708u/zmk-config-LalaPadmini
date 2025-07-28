@@ -23,7 +23,7 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,,,,,,,
+        // cursor speed. e.g.  2 / 1 == 2倍,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 6 2>,
         <&zip_temp_layer MOUSE_R_LAYER 300>;
 
@@ -39,7 +39,7 @@
         layers = <SCROLL_R_LAYER>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,,,,,,,
+            // <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,,,,,,,,,,,,,,,,,,,
             <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)>,
             <&zip_scroll_scaler 1 16>;
     };
@@ -199,8 +199,8 @@
             display-name = "tertiary_layer";
             bindings = <
 &trans  &kp AT_SIGN        &kp HASH      &kp DOLLAR            &kp PERCENT            &kp LS(NUMBER_3)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-&trans  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&trans  &kp DOUBLE_QUOTES  &kp COLON     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&trans  &kp DOUBLE_QUOTES  &kp COLON     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
 &trans  &trans                           &trans                &trans                 &trans            &kp NUMBER_0                &trans        &trans
             >;
 
